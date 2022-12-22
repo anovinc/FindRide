@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+    android:icon="@drawable/ic_search"
+    android:id="@+id/mainScreen"
+    android:title="Search"/>
+
+  <item
+    android:icon="@drawable/ic_person_search"
+    android:id="@+id/userRidesListFragment"
+    android:title="My Rides"/>
+
+  <item
+    android:id="@+id/fragmentBookings"
+    android:icon="@drawable/ic_car"
+    android:title="Bookings"></item>
+</menu>

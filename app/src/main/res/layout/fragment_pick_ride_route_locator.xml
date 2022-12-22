@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <fragment
+    app:layout_constraintTop_toBottomOf="@id/endDestination"
+    android:id="@+id/googleMapsView"
+    app:layout_constraintBottom_toTopOf="@id/btnConfirm"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="0dp" />
+
+  <TextView
+    android:text="Please select your start point."
+    android:id="@+id/infoTitle"
+    app:layout_constraintTop_toTopOf="parent"
+    android:textAppearance="@style/BodyDefaultLight"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+  <TextView
+    app:layout_constraintTop_toBottomOf="@id/infoTitle"
+    android:id="@+id/startDestination"
+    android:textAppearance="@style/H2Bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+  <TextView
+    app:layout_constraintTop_toBottomOf="@id/startDestination"
+    android:id="@+id/endDestination"
+    android:textAppearance="@style/H2Bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+  <Button
+    android:id="@+id/btnConfirm"
+    android:text="Confirm"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"></Button>
+</androidx.constraintlayout.widget.ConstraintLayout>

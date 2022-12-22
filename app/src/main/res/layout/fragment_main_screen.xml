@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/container"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+      android:id="@+id/progress"
+      layout="@layout/progress"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toTopOf="parent"></include>
+
+    <include
+      android:id="@+id/noInternet"
+      layout="@layout/no_internet_screen"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toTopOf="parent"></include>
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recycler"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginTop="8dp"
+      app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+      app:layout_constraintTop_toTopOf="parent"></androidx.recyclerview.widget.RecyclerView>
+
+    <ImageButton
+      android:id="@+id/filter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/transparent"
+      android:src="@drawable/ic_filter"
+      app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/bottomNavigation"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/bottom_navigation_height"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:menu="@menu/navigation_menu" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

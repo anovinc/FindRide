@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="DisplayBold">
+    <item name="android:fontFamily">@font/myriad_pro_bold_condensed</item>
+    <item name="android:textSize">32sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="H1Bold">
+    <item name="android:fontFamily">@font/myriad_pro_bold_condensed</item>
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:textSize">24sp</item>
+    <item name="android:lineSpacingExtra">8sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="BodyLargeLight">
+    <item name="android:fontFamily">@font/myriad_pro_light_condensed</item>
+    <item name="android:textSize">24sp</item>
+    <item name="android:lineSpacingExtra">8sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="BodyLargeDefault">
+    <item name="android:fontFamily">@font/myriad_pro_condensed</item>
+    <item name="android:textSize">24sp</item>
+    <item name="android:lineSpacingExtra">8sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="H2Bold">
+    <item name="android:fontFamily">@font/myriad_pro_bold_condensed</item>
+    <item name="android:textSize">20sp</item>
+    <item name="android:lineSpacingExtra">-8sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="BodyDefaultBold">
+    <item name="android:fontFamily">@font/myriad_pro_bold_condensed</item>
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:lineSpacingExtra">11sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="BodyDefault">
+    <item name="android:fontFamily">@font/myriad_pro_condensed</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:lineSpacingExtra">3sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="BodyDefaultLight">
+    <item name="android:fontFamily">@font/myriad_pro_light_condensed</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:lineSpacingExtra">11sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="CaptionDefaultBold">
+    <item name="android:fontFamily">@font/myriad_pro_bold_condensed</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:lineSpacingExtra">12sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="CaptionDefaultBoldAllCaps">
+    <item name="android:textAllCaps">true</item>
+    <item name="android:fontFamily">@font/myriad_pro_bold_condensed</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="CaptionDefault">
+    <item name="android:fontFamily">@font/myriad_pro_condensed</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:lineSpacingExtra">12sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="CaptionDefaultLight">
+    <item name="android:fontFamily">@font/myriad_pro_light_condensed</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:lineSpacingExtra">12sp</item>
+    <item name="android:textColor">@color/gray</item>
+  </style>
+
+  <style name="LabelBold">
+    <item name="android:fontFamily">@font/myriad_pro_bold_condensed</item>
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:lineSpacingExtra">0sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="LabelBoldDarkerGray">
+    <item name="android:fontFamily">@font/myriad_pro_bold_condensed</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:lineSpacingExtra">6sp</item>
+    <item name="android:textColor">@color/medium_gray</item>
+  </style>
+
+  <style name="LabelDefault">
+    <item name="android:fontFamily">@font/myriad_pro_condensed</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:lineSpacingExtra">6sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="LabelLight">
+    <item name="android:fontFamily">@font/myriad_pro_light_condensed</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:lineSpacingExtra">12sp</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+
+  <style name="BottomNavigationViewTextStyle">
+    <item name="android:fontFamily">@font/myriad_pro_condensed</item>
+    <item name="android:textSize">12sp</item>
+  </style>
+
+  <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+    <item name="android:fontFamily">@font/myriad_pro_bold_condensed</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="android:lineSpacingExtra">10sp</item>
+  </style>
+</resources>

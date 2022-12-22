@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <include
+    android:id="@+id/progress"
+    layout="@layout/progress"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_text"
+    android:text="@string/filter_rides"
+    android:textAppearance="@style/H2Bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/descTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_text"
+    android:text="Where you want to travel?"
+    android:textAppearance="@style/BodyDefaultLight"
+    app:layout_constraintTop_toBottomOf="@id/title" />
+
+  <TextView
+    android:id="@+id/rideRouteTitleStart"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:text="Start"
+    android:textAllCaps="true"
+    android:textAppearance="@style/LabelBold"
+    android:textColor="@color/black"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/descTitle" />
+
+  <EditText
+    android:id="@+id/rideDirectionValueStart"
+    style="@style/SingleInputViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:hint="Enter place, city or postcode..."
+    app:layout_constraintTop_toBottomOf="@id/rideRouteTitleStart" />
+
+  <TextView
+    android:id="@+id/rideRouteTitleEnd"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:text="End"
+    android:textAllCaps="true"
+    android:textAppearance="@style/LabelBold"
+    android:textColor="@color/black"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/rideDirectionValueStart" />
+
+  <EditText
+    android:id="@+id/rideDirectionValueEnd"
+    style="@style/SingleInputViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:hint="Enter place, city or postcode..."
+    app:layout_constraintTop_toBottomOf="@id/rideRouteTitleEnd" />
+
+  <Button
+    android:id="@+id/btnFilter"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:backgroundTint="@color/brand_red"
+    android:text="@string/filter"
+    android:textColor="@color/white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/price_slider" />
+
+  <TextView
+    android:id="@+id/priceTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_text"
+    android:text="Price"
+    android:textAllCaps="true"
+    android:textAppearance="@style/LabelBold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/dateValue" />
+
+  <TextView
+    android:id="@+id/dateTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="@dimen/margin_text"
+    android:text="Select date"
+    android:textAllCaps="true"
+    android:textAppearance="@style/LabelBold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/rideDirectionValueEnd" />
+
+  <EditText
+    android:id="@+id/dateValue"
+    style="@style/SingleInputViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:focusable="false"
+    android:hint="Select date"
+    android:inputType="none"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/dateTitle" />
+
+  <TextView
+    android:id="@+id/priceValue"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_text"
+    android:layout_marginStart="8dp"
+    android:textAllCaps="true"
+    android:textAppearance="@style/LabelBold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/priceTitle"
+    app:layout_constraintTop_toBottomOf="@id/dateValue" />
+
+  <com.google.android.material.slider.RangeSlider
+    android:id="@+id/price_slider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:valueFrom="0"
+    android:valueTo="999"
+    app:layout_constraintTop_toBottomOf="@id/priceTitle"
+    app:values="@array/slider_values" />
+</androidx.constraintlayout.widget.ConstraintLayout>

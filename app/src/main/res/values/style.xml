@@ -1,0 +1,154 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <style name="AppTheme" parent="BaseAppTheme">
+    <item name="android:statusBarColor">@color/white</item>
+    <item name="android:windowLightStatusBar">true</item>
+  </style>
+
+  <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimary</item>
+    <item name="colorAccent">@color/colorPrimary</item>
+    <item name="spinnerStyle">@style/Widget.App.Spinner</item>
+    <item name="android:spinnerStyle">@style/Widget.App.Spinner</item>
+    <item name="materialTimePickerTheme">@style/AppTheme.MaterialTimePickerTheme</item>
+    <item name="android:windowTranslucentStatus">false</item>
+    <item name="android:importantForAutofill">noExcludeDescendants</item>
+  </style>
+
+  <style name="AppTheme.MaterialTimePickerTheme" parent="ThemeOverlay.MaterialComponents.TimePicker">
+    <item name="colorPrimary">@color/colorPrimary</item>
+  </style>
+
+  <style name="Widget.App.Spinner" parent="@style/Widget.AppCompat.Spinner">
+    <item name="overlapAnchor">true</item>
+    <item name="android:background">@drawable/spinner_drawable</item>
+  </style>
+
+  <style name="DialogStyle" parent="Base.Theme.AppCompat.Dialog">
+    <item name="android:windowMinWidthMajor">90%</item>
+    <item name="android:windowMinWidthMinor">90%</item>
+    <item name="windowFixedHeightMajor">70%</item>
+    <item name="windowFixedHeightMinor">70%</item>
+  </style>
+
+  <style name="RoundedCornersDialog" parent="@style/Theme.MaterialComponents.Dialog">
+    <item name="android:windowMinWidthMajor">90%</item>
+    <item name="android:windowMinWidthMinor">90%</item>
+    <item name="windowFixedHeightMajor">70%</item>
+    <item name="windowFixedHeightMinor">70%</item>
+    <item name="dialogCornerRadius">34dp</item>
+  </style>
+
+  <style name="PumpErrorsDialog" parent="Base.Theme.AppCompat.Dialog">
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowIsFloating">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="UpdateAliasDialogStyle" parent="Base.Theme.AppCompat.Dialog">
+    <item name="android:windowMinWidthMajor">90%</item>
+    <item name="android:windowMinWidthMinor">90%</item>
+    <item name="windowFixedHeightMajor">70%</item>
+    <item name="windowFixedHeightMinor">70%</item>
+  </style>
+
+  <style name="MultiLineInputStyle" parent="SingleInputViewStyle">
+    <item name="android:singleLine">false</item>
+    <item name="android:paddingTop">30dp</item>
+    <item name="android:clipToPadding">true</item>
+    <item name="android:inputType">textMultiLine</item>
+  </style>
+
+  <style name="SingleInputViewStyle" parent="@style/BodyDefaultLight">
+    <item name="android:fontFamily">@font/myriad_pro_light_condensed</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textCursorDrawable">@color/black</item>
+    <item name="android:background">@drawable/selector_edit_text</item>
+    <item name="android:textColorHint">@color/medium_gray</item>
+    <item name="android:inputType">text</item>
+  </style>
+
+
+  <style name="SelectorTextStyle" parent="@style/BodyDefaultLight">
+    <item name="android:fontFamily">@font/myriad_pro_light_condensed</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+    <item name="android:drawableEnd">@drawable/icn_arrow_drop_down</item>
+    <item name="android:background">@drawable/selector_edit_text</item>
+  </style>
+
+  <style name="ShapeAppearance.App.LeftSideCorners" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSizeTopLeft">4dp</item>
+    <item name="cornerSizeBottomLeft">4dp</item>
+  </style>
+
+  <style name="ShapeAppearance.App.ProfileImage" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSizeTopLeft">36dp</item>
+    <item name="cornerSizeBottomLeft">36dp</item>
+    <item name="cornerSizeTopRight">36dp</item>
+    <item name="cornerSizeBottomRight">36dp</item>
+  </style>
+
+  <style name="ShapeAppearance.App.JobPhoto" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSizeTopLeft">40dp</item>
+    <item name="cornerSizeBottomLeft">40dp</item>
+    <item name="cornerSizeTopRight">40dp</item>
+    <item name="cornerSizeBottomRight">40dp</item>
+  </style>
+
+  <style name="ShapeAppearance.App.MembersImage" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSizeTopLeft">30dp</item>
+    <item name="cornerSizeBottomLeft">30dp</item>
+    <item name="cornerSizeTopRight">30dp</item>
+    <item name="cornerSizeBottomRight">30dp</item>
+  </style>
+
+  <style name="ShapeAppearance.App.Thumbnail" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSizeTopLeft">4dp</item>
+    <item name="cornerSizeBottomLeft">4dp</item>
+    <item name="cornerSizeTopRight">4dp</item>
+    <item name="cornerSizeBottomRight">4dp</item>
+  </style>
+
+  <style name="ShapeAppearance.App.OwnersImage" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">50%</item>
+  </style>
+
+  <style name="TooltipWhiteText" parent="">
+    <item name="android:fontFamily">@font/myriad_pro_condensed</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:textSize">16sp</item>
+  </style>
+
+  <style name="NavigationTheme" parent="AppTheme">
+    <item name="listPreferredItemHeightSmall">56dp</item>
+    <item name="android:layout_marginStart">4dp</item>
+  </style>
+
+  <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+    <item name="bottomSheetStyle">@style/AppModalStyle</item>
+  </style>
+
+  <style name="EditNotesBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+    <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    <item name="android:windowSoftInputMode">adjustResize</item>
+    <item name="android:windowIsFloating">true</item>
+  </style>
+
+  <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+    <item name="android:background">@drawable/rounded_bottom_sheet</item>
+  </style>
+
+  <style name="TooltipButton" parent="BaseAppTheme">
+    <item name="android:tint">@color/black</item>
+  </style>
+
+</resources>

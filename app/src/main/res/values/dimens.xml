@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="card_elevation">4dp</dimen>
+  <dimen name="card_corner_radius">4dp</dimen>
+  <dimen name="card_margin_small">8dp</dimen>
+  <dimen name="card_margin_big">24dp</dimen>
+  <dimen name="seat_height">40dp</dimen>
+  <dimen name="seat_width">40dp</dimen>
+  <dimen name="margin_text">12dp</dimen>
+  <dimen name="margin_end_start_direction">16dp</dimen>
+  <dimen name="card_height">300dp</dimen>
+  <dimen name="small_margin">2dp</dimen>
+  <dimen name="bottom_navigation_height">50dp</dimen>
+  <dimen name="button_add_height">64dp</dimen>
+  <dimen name="button_add_width">64dp</dimen>
+  <dimen name="guideline_margin">24dp</dimen>
+  <dimen name="google_maps_height">400dp</dimen>
+  <dimen name="bottom_btn_height">60dp</dimen>
+  <dimen name="details_big_margin">32dp</dimen>
+  <dimen name="profile_image_height">100dp</dimen>
+  <dimen name="profile_image_width">100dp</dimen>
+</resources>

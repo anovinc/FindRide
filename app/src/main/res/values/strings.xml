@@ -1,0 +1,23 @@
+<resources>
+  <string name="app_name">FindRide</string>
+  <string name="add_new_ride">Add new Ride</string>
+  <string name="rides">Rides</string>
+  <string name="osijek_pozega">Osijek - Požega</string>
+  <string name="pozega_osijek">Požega - Osijek</string>
+  <string name="something_went_wrong">Something went wrong. Try again.</string>
+  <string name="empty_fields">Some fields are empty!</string>
+  <string name="no_internet">No Internet</string>
+  <string name="filter_rides">Filter Rides</string>
+  <string name="filter">Filter</string>
+  <string name="no_rides_avaiable">There is no rides with requested parameters.</string>
+
+  <string-array name="available_seats">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+  </string-array>
+
+</resources>

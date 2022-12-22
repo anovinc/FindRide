@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "595343910053",
+    "project_id": "findride-58f9d",
+    "storage_bucket": "findride-58f9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595343910053:android:29eb91143b73dbcdebd94c",
+        "android_client_info": {
+          "package_name": "com.example.findride"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595343910053-4pndbf042ig74k4tv3pvns4kc20f9005.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZmO2C7UaYEeShWo3aCCUf_kSd7THQINw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595343910053-4pndbf042ig74k4tv3pvns4kc20f9005.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

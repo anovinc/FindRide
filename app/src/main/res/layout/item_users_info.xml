@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/profileImage"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_margin="@dimen/margin_text"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/name"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_text"
+    android:textAllCaps="true"
+    android:textAppearance="@style/H2Bold"
+    app:layout_constraintBottom_toBottomOf="@id/profileImage"
+    app:layout_constraintStart_toEndOf="@id/profileImage" />
+
+  <ImageView
+    android:id="@+id/ic_phone"
+    android:src="@drawable/ic_phone"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/light_gray"
+    app:layout_constraintBottom_toBottomOf="parent"></View>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <include
+    android:id="@+id/toolbar"
+    layout="@layout/toolbar"
+    app:layout_constraintTop_toTopOf="parent"></include>
+
+  <include
+    android:id="@+id/progress"
+    layout="@layout/progress"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"></include>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+    <View
+      android:id="@+id/separator"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="@color/light_gray"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toTopOf="@id/btnAdd"
+      app:layout_constraintTop_toBottomOf="@id/separator">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+          android:id="@+id/dateTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          android:text="Select date"
+          android:textAllCaps="true"
+          android:textAppearance="@style/LabelBold"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+          android:id="@+id/dateValue"
+          style="@style/SingleInputViewStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:focusable="false"
+          android:hint="Select date"
+          android:inputType="none"
+          app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toBottomOf="@id/dateTitle" />
+
+        <TextView
+          android:id="@+id/timeTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:text="Select Ride time"
+          android:textAllCaps="true"
+          android:textAppearance="@style/LabelBold"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toBottomOf="@id/dateValue" />
+
+        <EditText
+          android:id="@+id/timeValue"
+          style="@style/SingleInputViewStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:focusable="false"
+          android:hint="Select Ride time"
+          android:inputType="none"
+          app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toBottomOf="@id/timeTitle" />
+
+        <TextView
+          android:id="@+id/numOfAvailableSeatsTitle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:text="Available seats"
+          android:textAllCaps="true"
+          android:textAppearance="@style/LabelBold"
+          android:textColor="@color/black"
+          app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toBottomOf="@id/timeValue" />
+
+        <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/numOfAvailableSeatsValueLayout"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="-8dp"
+          android:layout_marginTop="4dp"
+          android:layout_marginEnd="-8dp"
+          android:backgroundTint="@color/white"
+          android:textColorHint="@color/medium_gray"
+          app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toBottomOf="@id/numOfAvailableSeatsTitle">
+
+          <AutoCompleteTextView
+            android:id="@+id/numOfAvailableSeatsValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+          android:id="@+id/rideRouteTitleStart"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:text="Start Address"
+          android:textAllCaps="true"
+          android:textAppearance="@style/LabelBold"
+          android:textColor="@color/black"
+          app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toBottomOf="@id/numOfAvailableSeatsValueLayout" />
+
+        <EditText
+          android:id="@+id/rideDirectionValueStart"
+          style="@style/SingleInputViewStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:inputType="none"
+          android:layout_marginTop="4dp"
+          android:hint="Enter start Ride Direction"
+          app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toBottomOf="@id/rideRouteTitleStart" />
+
+        <TextView
+          android:id="@+id/rideRouteTitleEnd"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:text="End Address"
+          android:textAllCaps="true"
+          android:textAppearance="@style/LabelBold"
+          android:textColor="@color/black"
+          app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toBottomOf="@id/rideDirectionValueStart" />
+        <EditText
+          android:id="@+id/rideDirectionValueEnd"
+          style="@style/SingleInputViewStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:inputType="none"
+          android:layout_marginTop="4dp"
+          android:hint="Enter end Ride Direction"
+          app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toBottomOf="@id/rideRouteTitleEnd" />
+
+        <TextView
+          android:id="@+id/priceTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:text="Price (xxx Kn)"
+          android:textAllCaps="true"
+          android:textAppearance="@style/LabelBold"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toBottomOf="@id/rideDirectionValueEnd" />
+
+        <EditText
+          android:id="@+id/priceValue"
+          style="@style/SingleInputViewStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:hint="Enter price"
+          android:inputType="number"
+          android:maxLength="3"
+          app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toBottomOf="@id/priceTitle" />
+
+        <EditText
+          android:id="@+id/desc"
+          style="@style/MultiLineInputStyle"
+          android:layout_width="match_parent"
+          android:layout_height="120dp"
+          android:layout_marginBottom="24dp"
+          android:hint="Add description about car, car, car plate... Something that can help recognize car (Optional)."
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+          app:layout_constraintStart_toStartOf="@id/guidelineStart"
+          app:layout_constraintTop_toBottomOf="@id/priceValue" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+          android:id="@+id/guidelineStart"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintGuide_begin="24dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+          android:id="@+id/guidelineEnd"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintGuide_end="24dp" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+      android:id="@+id/btnAdd"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:backgroundTint="@color/colorPrimaryDark"
+      android:text="@string/add_new_ride"
+      android:textColor="@color/white"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

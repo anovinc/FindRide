@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:clickable="true"
+  android:focusable="true"
+  android:background="@color/white"
+  android:orientation="vertical">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_marginBottom="150dp"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/noInternetTitle"
+      android:textAppearance="@style/H1Bold"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="20dp"
+      android:gravity="center_horizontal"
+      android:text="@string/no_internet"
+      app:layout_constraintBottom_toTopOf="@id/noInternetMsg" />
+
+    <TextView
+      android:id="@+id/noInternetMsg"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="52dp"
+      android:layout_marginEnd="52dp"
+      android:layout_marginBottom="44dp"
+      android:gravity="center_horizontal"
+      android:lineSpacingExtra="11sp"
+      android:textAppearance="@style/BodyDefaultLight"
+      android:text="It seems that you have connectivity problem. Please check your internet connection and try again."
+      app:layout_constraintBottom_toTopOf="@id/tryAgainBtn"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/tryAgainBtn"
+      android:layout_width="56dp"
+      android:layout_height="56dp"
+      android:src="@drawable/icn_resend"
+      android:tint="@color/colorPrimary"
+      android:layout_marginBottom="50dp"
+      app:backgroundTint="@color/white"
+      app:fabCustomSize="56dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

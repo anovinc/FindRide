@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <color name="colorPrimary">#be1e2d</color>
+  <color name="colorPrimaryDark">#911722</color>
+  <color name="colorAccent">#911722</color>
+
+  <color name="brand_red">#be1e2d</color>
+  <color name="red_default">#911722</color>
+  <color name="red_default_transparent">#4D911722</color>
+  <color name="dark">#181818</color>
+  <color name="dark_opacity">#80181818</color>
+  <color name="transparent">#00ffffff</color>
+  <color name="white">#ffffff</color>
+  <color name="light_gray">#dcddde</color>
+  <color name="darkish_green">#36802c</color>
+  <color name="whiteish">#ececec</color>
+
+  <color name="modals_red">#be1e2d</color>
+  <color name="white_transparent_80_percent">#CCFFFFFF</color>
+
+
+  <color name="black_transparent_40_percent">#40000000</color>
+  <color name="darker_gray">#c0c0c0</color>
+  <color name="black">#000000</color>
+  <color name="gaugeColor">#D7D8D9</color>
+  <color name="indicator_unselected">#4D000000</color>
+
+  <color name="medium_gray">#32000000</color>
+
+  <array name="sliderColors">
+    <item>#FCC600</item>
+    <item>#0C9800</item>
+    <item>#be1e2d</item>
+  </array>
+
+  <color name="yellow">#FCC600</color>
+  <color name="green">#0C9800</color>
+
+  <color name="shadow_color">#34A6B3C2</color>
+  <color name="pin_normal">#6B767E</color>
+
+  <color name="gray">#4ca6b3c2</color>
+
+  /** Tip status color**/
+  <color name="excellent">#36802c</color>
+  <color name="fine">#8bc34a</color>
+  <color name="average">#cddc39</color>
+  <color name="poor">#ffeb3b</color>
+  <color name="worn_out">#be1e2d</color>
+
+  <color name="progress_gray">#c0c0c0</color>
+  <color name="progress_gray_dark">#c0c0c0</color>
+  <color name="default_red_progress">#be1e2d</color>
+  <color name="grey">#636466</color>
+  <color name="contact_edit">#4d4d4f</color>
+  <color name="grey_disable">#59363636</color>
+  <color name="card_shadow">#a6b3c2</color>
+  <color name="pale_gray">#EFEFEF</color>
+  <color name="ic_launcher_background">@android:color/transparent</color>
+
+  <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/pale_gray</color>
+
+</resources>

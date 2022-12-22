@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="310dp">
+
+  <androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:id="@+id/card"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/card_margin_big"
+    android:layout_marginTop="@dimen/card_margin_small"
+    android:layout_marginEnd="@dimen/card_margin_big"
+    android:layout_marginBottom="@dimen/card_margin_small"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <TextView
+        android:id="@+id/rideName"
+        style="@style/H2Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_text"
+        android:layout_marginTop="@dimen/margin_text"
+        android:layout_marginBottom="@dimen/margin_text"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+        android:id="@+id/rideSurname"
+        style="@style/H2Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/margin_text"
+        android:layout_marginBottom="@dimen/margin_text"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toEndOf="@id/rideName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <ImageView
+        android:id="@+id/firstFreeSeat"
+        style="@style/H2Bold"
+        android:layout_width="@dimen/seat_width"
+        android:layout_height="@dimen/seat_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/margin_text"
+        android:layout_marginBottom="@dimen/margin_text"
+        android:src="@drawable/seat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rideName" />
+
+      <ImageView
+        android:id="@+id/secondFreeSeat"
+        style="@style/H2Bold"
+        android:layout_width="@dimen/seat_width"
+        android:layout_height="@dimen/seat_height"
+        android:layout_marginBottom="@dimen/margin_text"
+        android:src="@drawable/seat"
+        app:layout_constraintStart_toEndOf="@id/firstFreeSeat"
+        app:layout_constraintTop_toTopOf="@id/firstFreeSeat" />
+
+      <ImageView
+        android:id="@+id/thirdFreeSeat"
+        style="@style/H2Bold"
+        android:layout_width="@dimen/seat_width"
+        android:layout_height="@dimen/seat_height"
+        android:layout_marginBottom="@dimen/margin_text"
+        android:src="@drawable/seat"
+        app:layout_constraintStart_toEndOf="@id/secondFreeSeat"
+        app:layout_constraintTop_toTopOf="@id/firstFreeSeat" />
+
+      <ImageView
+        android:id="@+id/fourthFreeSeat"
+        style="@style/H2Bold"
+        android:layout_width="@dimen/seat_width"
+        android:layout_height="@dimen/seat_width"
+        android:layout_marginBottom="@dimen/margin_text"
+        android:src="@drawable/seat"
+        app:layout_constraintStart_toEndOf="@id/thirdFreeSeat"
+        app:layout_constraintTop_toBottomOf="@id/rideName"
+        app:layout_constraintTop_toTopOf="@id/firstFreeSeat" />
+
+      <ImageView
+        android:id="@+id/fifthFreeSeat"
+        style="@style/H2Bold"
+        android:layout_width="@dimen/seat_width"
+        android:layout_height="@dimen/seat_height"
+        android:layout_marginBottom="@dimen/margin_text"
+        android:src="@drawable/seat"
+        app:layout_constraintStart_toEndOf="@id/fourthFreeSeat"
+        app:layout_constraintTop_toBottomOf="@id/rideName"
+        app:layout_constraintTop_toTopOf="@id/firstFreeSeat" />
+
+      <ImageView
+        android:id="@+id/sixthFreeSeat"
+        style="@style/H2Bold"
+        android:layout_width="@dimen/seat_width"
+        android:layout_height="@dimen/seat_height"
+        android:layout_marginBottom="@dimen/margin_text"
+        android:src="@drawable/seat"
+        app:layout_constraintStart_toEndOf="@id/fifthFreeSeat"
+        app:layout_constraintTop_toBottomOf="@id/rideName"
+        app:layout_constraintTop_toTopOf="@id/firstFreeSeat" />
+
+
+      <TextView
+        android:id="@+id/price"
+        style="@style/H2Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_text"
+        android:layout_marginTop="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/priceTitle"
+        app:layout_constraintStart_toEndOf="@id/priceTitle" />
+
+      <TextView
+        android:id="@+id/priceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_text"
+        android:layout_marginTop="@dimen/margin_text"
+        android:text="Price:"
+        android:textAppearance="@style/LabelBoldDarkerGray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstFreeSeat" />
+
+      <TextView
+        android:id="@+id/time"
+        style="@style/H2Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_text"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/timeTitle"
+        app:layout_constraintStart_toEndOf="@id/timeTitle" />
+
+      <TextView
+        android:id="@+id/timeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time:"
+        android:textAppearance="@style/LabelBoldDarkerGray"
+        app:layout_constraintBottom_toBottomOf="@id/dateTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/date" />
+
+      <TextView
+        android:id="@+id/startTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_marginStart="@dimen/margin_text"
+        android:layout_marginTop="@dimen/margin_end_start_direction"
+        android:textAppearance="@style/LabelBoldDarkerGray"
+        app:layout_constraintTop_toBottomOf="@id/dateTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+      <TextView
+        android:id="@+id/endTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End"
+        android:layout_marginStart="@dimen/margin_text"
+        android:layout_marginTop="@dimen/margin_end_start_direction"
+        android:textAppearance="@style/LabelBoldDarkerGray"
+        app:layout_constraintTop_toBottomOf="@id/startDestination"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+      <TextView
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/margin_end_start_direction"
+        android:layout_marginEnd="@dimen/margin_end_start_direction"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/startTitle"
+        android:id="@+id/startDestination"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/H2Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+      <TextView
+        android:layout_marginEnd="@dimen/margin_end_start_direction"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/endTitle"
+        android:id="@+id/endDestination"
+        android:layout_marginStart="@dimen/margin_end_start_direction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/H2Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+      <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_text"
+        android:textAppearance="@style/H2Bold"
+        app:layout_constraintBottom_toBottomOf="@id/dateTitle"
+        app:layout_constraintStart_toEndOf="@id/dateTitle" />
+
+      <TextView
+        android:id="@+id/dateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_text"
+        android:layout_marginTop="@dimen/margin_text"
+        android:text="Date:"
+        android:textAppearance="@style/LabelBoldDarkerGray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price" />
+
+      <TextView
+        android:id="@+id/filled"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/H2Bold"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

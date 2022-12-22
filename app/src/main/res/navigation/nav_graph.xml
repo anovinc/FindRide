@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/nav_graph"
+  app:startDestination="@id/loginFragment">
+
+  <fragment
+    android:id="@+id/loginFragment"
+    android:name="com.example.findride.ui.authentication.LoginFragment"
+    android:label="LoginFragment">
+    <action
+      android:id="@+id/action_loginFragment_to_registrationFragment"
+      app:destination="@id/registrationFragment" />
+    <action
+      android:id="@+id/action_loginFragment_to_mainScreen"
+      app:destination="@id/mainScreen" />
+  </fragment>
+  <fragment
+    android:id="@+id/registrationFragment"
+    android:name="com.example.findride.ui.authentication.RegistrationFragment"
+    android:label="RegistrationFragment">
+    <action
+      android:id="@+id/action_registrationFragment_to_mainScreen"
+      app:destination="@id/mainScreen" />
+  </fragment>
+  <fragment
+    android:id="@+id/mainScreen"
+    android:name="com.example.findride.ui.rides.list.MainScreen"
+    android:label="MainScreen">
+    <action
+      android:id="@+id/action_mainScreen_to_loginFragment"
+      app:destination="@id/loginFragment"
+      app:popUpTo="@id/loginFragment"
+      app:popUpToInclusive="true" />
+    <action
+      android:id="@+id/action_mainScreen_to_rideDetailsFragment"
+      app:destination="@id/rideDetailsFragment"
+      app:enterAnim="@android:anim/fade_in"
+      app:popUpTo="@id/rideDetailsFragment"
+      app:popUpToInclusive="true" />
+    <action
+      android:id="@+id/action_mainScreen_to_userRidesListFragment"
+      app:destination="@id/userRidesListFragment"
+      app:popUpTo="@id/mainScreen"
+      app:popUpToInclusive="true" />
+    <action
+      android:id="@+id/action_mainScreen_to_fragmentBookings"
+      app:destination="@id/fragmentBookings"
+      app:popUpTo="@id/mainScreen"
+      app:popUpToInclusive="true" />
+    <action
+      android:id="@+id/action_mainScreen_to_filterRidesFragment"
+      app:destination="@id/filterRidesFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/addNewRideFragment"
+    android:name="com.example.findride.ui.rides.AddNewRideFragment"
+    android:label="AddNewRideFragment">
+    <action
+      android:id="@+id/action_addNewRideFragment_to_userRidesListFragment"
+      app:destination="@id/userRidesListFragment" />
+    <action
+      android:id="@+id/action_addNewRideFragment_to_pickFinalRideDirectionLocatorFragment"
+      app:destination="@id/pickFinalRideDirectionLocatorFragment"
+      app:popUpTo="@id/addNewRideFragment"
+      app:popUpToInclusive="true" />
+  </fragment>
+  <fragment
+    android:id="@+id/rideDetailsFragment"
+    android:name="com.example.findride.ui.rides.details.RideDetailsFragment"
+    android:label="RideDetailsFragment" >
+    <argument
+      android:name="rideId"
+      app:argType="string" />
+    <action
+      android:id="@+id/action_rideDetailsFragment_to_mainScreen"
+      app:destination="@id/mainScreen"
+      app:popUpTo="@id/rideDetailsFragment"
+      app:popUpToInclusive="true" />
+    <argument
+      android:name="fromWhichFragment"
+      app:argType="integer" />
+    <action
+      android:id="@+id/action_rideDetailsFragment_to_userRidesListFragment"
+      app:destination="@id/userRidesListFragment"
+      app:popUpTo="@id/userRidesListFragment"
+      app:popUpToInclusive="true" />
+    <action
+      android:id="@+id/action_rideDetailsFragment_to_fragmentBookings"
+      app:destination="@id/fragmentBookings"
+      app:popUpTo="@id/rideDetailsFragment"
+      app:popUpToInclusive="true" />
+    <action
+      android:id="@+id/action_rideDetailsFragment_to_filteredRidesListFragment"
+      app:destination="@id/filteredRidesListFragment"
+      app:popUpTo="@id/filteredRidesListFragment"
+      app:popUpToInclusive="true" />
+  </fragment>
+  <fragment
+    android:id="@+id/userRidesListFragment"
+    android:name="com.example.findride.ui.rides.list.UserRidesListFragment"
+    android:label="UserRidesListFragment" >
+    <action
+      android:id="@+id/action_userRidesListFragment_to_mainScreen"
+      app:destination="@id/mainScreen"
+      app:popUpTo="@id/userRidesListFragment"
+      app:popUpToInclusive="true" />
+    <action
+      android:id="@+id/action_userRidesListFragment_to_rideDetailsFragment"
+      app:destination="@id/rideDetailsFragment" />
+
+    <action
+      android:id="@+id/action_userRidesListFragment_to_startDestinationLocatorFragment"
+      app:destination="@id/startDestinationLocatorFragment" />
+    <action
+      android:id="@+id/action_userRidesListFragment_to_loginFragment"
+      app:destination="@id/loginFragment"
+      app:popUpTo="@id/userRidesListFragment"
+      app:popUpToInclusive="true" />
+    <action
+      android:id="@+id/action_userRidesListFragment_to_fragmentBookings"
+      app:destination="@id/fragmentBookings"
+      app:popUpTo="@id/userRidesListFragment"
+      app:popUpToInclusive="true" />
+  </fragment>
+  <fragment
+    android:id="@+id/startDestinationLocatorFragment"
+    android:name="com.example.findride.ui.rideroute.PickStartRideDirectionLocatorFragment"
+    android:label="StartDestinationLocatorFragment" >
+    <action
+      android:id="@+id/action_startDestinationLocatorFragment_to_pickFinalRideDirectionLocatorFragment2"
+      app:destination="@id/pickFinalRideDirectionLocatorFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/pickFinalRideDirectionLocatorFragment"
+    android:name="com.example.findride.ui.rideroute.PickFinalRideDirectionLocatorFragment"
+    android:label="PickFinalRideDirectionLocatorFragment" >
+    <action
+      android:id="@+id/action_pickFinalRideDirectionLocatorFragment_to_addNewRideFragment"
+      app:destination="@id/addNewRideFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/fragmentBookings"
+    android:name="com.example.findride.ui.rides.booking.BookingsContainerFragment"
+    android:label="FragmentBookings" >
+    <action
+      android:id="@+id/action_fragmentBookings_to_userRidesListFragment"
+      app:destination="@id/userRidesListFragment"
+      app:popUpTo="@id/fragmentBookings"
+      app:popUpToInclusive="true" />
+    <action
+      android:id="@+id/action_fragmentBookings_to_mainScreen"
+      app:destination="@id/mainScreen"
+      app:popUpTo="@id/fragmentBookings"
+      app:popUpToInclusive="true" />
+    <action
+      android:id="@+id/action_fragmentBookings_to_loginFragment"
+      app:destination="@id/loginFragment"
+      app:popUpTo="@id/fragmentBookings"
+      app:popUpToInclusive="true" />
+    <action
+      android:id="@+id/action_fragmentBookings_to_rideDetailsFragment"
+      app:destination="@id/rideDetailsFragment" />
+  </fragment>
+  <dialog
+    android:id="@+id/filterRidesFragment"
+    android:name="com.example.findride.ui.rides.FilterRidesBottomSheetDialog"
+    android:label="FilterRidesFragment" >
+    <action
+      android:id="@+id/action_filterRidesFragment_to_filteredRidesListFragment"
+      app:destination="@id/filteredRidesListFragment"
+      app:popUpTo="@id/filteredRidesListFragment"
+      app:popUpToInclusive="true" />
+  </dialog>
+  <fragment
+    android:id="@+id/filteredRidesListFragment"
+    android:name="com.example.findride.ui.rides.FilteredRidesListFragment"
+    android:label="FilteredRidesListFragment" >
+    <action
+      android:id="@+id/action_filteredRidesListFragment_to_filterRidesFragment"
+      app:destination="@id/filterRidesFragment" />
+    <action
+      android:id="@+id/action_filteredRidesListFragment_to_mainScreen"
+      app:destination="@id/mainScreen"
+      app:popUpTo="@id/mainScreen"
+      app:popUpToInclusive="true" />
+    <action
+      android:id="@+id/action_filteredRidesListFragment_to_rideDetailsFragment"
+      app:destination="@id/rideDetailsFragment" />
+  </fragment>
+</navigation>
